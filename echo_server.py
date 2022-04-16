@@ -20,7 +20,7 @@ if __name__ == "__main__":
         print("{0} <BindIP>".format(sys.argv[0]))
         sys.exit()
     bindIP = sys.argv[1]
-    bindPort = 5426
+    bindPort = 5425
 
     server = socketserver.TCPServer((bindIP, bindPort), MyTCPHandler)
 

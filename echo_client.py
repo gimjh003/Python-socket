@@ -21,7 +21,7 @@ if __name__ == "__main__":
         sock.send(sbuff)
         print("송신 : {0}".format(message))
 
-        # 메아리 수신
+        # 메아리 수신bl
         rbuff = sock.recv(1024)
         received = str(rbuff, encoding="utf-8")
         print("수신 : {0}".format(received))
