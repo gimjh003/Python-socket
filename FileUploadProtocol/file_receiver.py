@@ -97,11 +97,12 @@ class FileReceiveHandler(socketserver.BaseRequestHandler):
                 file.close()
 
                 print()
+                print("파일 크기 : {0} bytes".format(fileSize))
                 print("수신 파일 크기 : {0} bytes".format(recvFileSize))
 
                 rstMsg = Message()
                 rstMsg.Body = BodyResult(None)
-                rstMsg.Body.MSGID = reqMsg.Header.yeMSGID
+                rstMsg.Body.MSGID = reqMsg.Header.MSGID
                 rstMsg.Body.RESULT = message.SUCCESS
 
                 rstMsg.Header = Header(None)

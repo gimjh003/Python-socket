@@ -11,8 +11,8 @@ class BodyRequest(ISerializable):
             # 1 unsigned long long, N character
             self.struct_fmt = str.format("=Q{0}s", slen-8)
             self.struct_len = struct.calcsize(self.struct_fmt)
-            if slen > 4: # unsigned long long의 크기
-                slen = slen-4
+            if slen > 8: # unsigned long long의 크기
+                slen = slen-8
             else:
                 slen = 0
             

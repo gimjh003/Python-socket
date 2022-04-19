@@ -41,4 +41,4 @@ class Message(ISerializable):
         return header+body
     
     def GetSize(self):
-        return self.Header.GetSize() + self.Body.GetSize()
+        return self.Body.GetSize()
